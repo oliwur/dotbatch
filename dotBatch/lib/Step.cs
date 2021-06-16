@@ -22,7 +22,7 @@ namespace dotBatch
                 Object o = ItemReader.ReadItem();
                 ItemProcessor.Process(o);
             }
-            
+            ItemReader.Close();
             
             ItemWriter.write();
         }
