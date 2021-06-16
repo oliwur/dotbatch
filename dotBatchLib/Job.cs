@@ -5,7 +5,7 @@ namespace dotBatch
 {
     public class Job
     {
-        private readonly ILogger _logger = AppLogging.CreateLogger<Job>();
+        private readonly ILogger _logger = LibLogging.CreateLogger<Job>();
 
         public string Name { get; set; }
         public string Description { get; set; }

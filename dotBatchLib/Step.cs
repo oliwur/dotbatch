@@ -5,7 +5,7 @@ namespace dotBatch
 {
     public class Step
     {
-        private readonly ILogger _logger = AppLogging.CreateLogger<Step>();
+        private readonly ILogger _logger = LibLogging.CreateLogger<Step>();
         
         public string Name { get; set; }
 

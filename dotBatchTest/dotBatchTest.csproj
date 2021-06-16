@@ -13,7 +13,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\dotBatch\dotBatch.csproj" />
+      <ProjectReference Include="..\dotBatchLib\dotBatchLib.csproj" />
     </ItemGroup>
 
 </Project>

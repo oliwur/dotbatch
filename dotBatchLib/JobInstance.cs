@@ -4,7 +4,7 @@ namespace dotBatch
 {
     public class JobInstance
     {
-        private readonly ILogger _logger = AppLogging.CreateLogger<JobInstance>();
+        private readonly ILogger _logger = LibLogging.CreateLogger<JobInstance>();
         
         public Job Job { get; set; }
 

@@ -32,6 +32,7 @@ namespace dotBatch
                 .Build();
 
             AppLogging.LoggerFactory = host.Services.GetRequiredService<ILoggerFactory>();
+            LibLogging.LoggerFactory = host.Services.GetRequiredService<ILoggerFactory>();
 
             await host.RunAsync();
         }

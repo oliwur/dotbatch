@@ -4,7 +4,7 @@ namespace dotBatch
 {
     public class ItemWriter
     {
-        private readonly ILogger _logger = AppLogging.CreateLogger<ItemReader>();
+        private readonly ILogger _logger = LibLogging.CreateLogger<ItemReader>();
         
         public void write()
         {
