@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace dotBatch
+namespace dotBatchLib
 {
-    public abstract class AbstractItemReader : ItemReader
+    public abstract class AbstractItemReader : ITemReader
     {
         public virtual void Open()
         {

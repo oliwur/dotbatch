@@ -1,12 +1,12 @@
 ﻿using Microsoft.Extensions.Logging;
 
-namespace dotBatch
+namespace dotBatchLib
 {
     public class ItemWriter
     {
-        private readonly ILogger _logger = LibLogging.CreateLogger<ItemReader>();
+        private readonly ILogger _logger = LibLogging.CreateLogger<ITemReader>();
         
-        public void write()
+        public void Write()
         {
             _logger.LogTrace("write");
         }

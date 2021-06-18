@@ -1,6 +1,6 @@
 ﻿using System.IO;
 
-namespace dotBatch
+namespace dotBatchLib
 {
     public class CSVItemReader : AbstractItemReader
     {

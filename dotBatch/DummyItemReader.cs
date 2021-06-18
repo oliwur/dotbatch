@@ -1,4 +1,5 @@
 ﻿using System;
+using dotBatchLib;
 using Microsoft.Extensions.Logging;
 
 namespace dotBatch

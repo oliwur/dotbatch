@@ -1,11 +1,11 @@
 ﻿using Microsoft.Extensions.Logging;
 
-namespace dotBatch
+namespace dotBatchLib
 {
     public class JobInstance
     {
         private readonly ILogger _logger = LibLogging.CreateLogger<JobInstance>();
-        
+
         public Job Job { get; set; }
 
         public JobExecution CreateExecution()

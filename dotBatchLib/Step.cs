@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.Extensions.Logging;
 
-namespace dotBatch
+namespace dotBatchLib
 {
     public class Step
     {
@@ -9,11 +9,11 @@ namespace dotBatch
         
         public string Name { get; set; }
 
-        public ItemReader ItemReader { get; set; }
-        public ItemProcessor ItemProcessor { get; set; }
+        public ITemReader ItemReader { get; set; }
+        public ITemProcessor ItemProcessor { get; set; }
         public ItemWriter ItemWriter { get; set; }
 
-        public void execute()
+        public void Execute()
         {
             _logger.LogTrace("execute");
             ItemReader.Open();
@@ -24,7 +24,7 @@ namespace dotBatch
             }
             ItemReader.Close();
             
-            ItemWriter.write();
+            ItemWriter.Write();
         }
     }
 }

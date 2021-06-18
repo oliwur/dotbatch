@@ -1,5 +1,5 @@
 ﻿using System;
-using dotBatch;
+using dotBatchLib;
 using NUnit.Framework;
 
 namespace dotBatchTest
@@ -7,12 +7,12 @@ namespace dotBatchTest
     [TestFixture]
     public class CSVItemReaderTests
     {
-        private string testData = @"C:\data\owid\covid\owid-covid-data.csv";
+        private readonly string _testData = @"C:\data\owid\covid\owid-covid-data.csv";
 
         [Test]
         public void CanOpenFile()
         {
-            CSVItemReader reader = new CSVItemReader(){FilePath = testData};
+            CSVItemReader reader = new CSVItemReader(){FilePath = _testData};
 
             reader.Open();
 
@@ -24,7 +24,7 @@ namespace dotBatchTest
         [Test]
         public void CanGoToEndOfFile()
         {
-            ItemReader reader = new CSVItemReader() {FilePath = testData};
+            ITemReader reader = new CSVItemReader() {FilePath = _testData};
             
             reader.Open();
             while (reader.HasNext())

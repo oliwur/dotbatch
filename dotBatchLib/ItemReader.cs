@@ -1,12 +1,11 @@
 ﻿using System;
-using Microsoft.Extensions.Logging;
 
-namespace dotBatch
+namespace dotBatchLib
 {
     /// <summary>
     /// ItemReader defines the batch artifact that reads items for chunk processing
     /// </summary>
-    public interface ItemReader
+    public interface ITemReader
     {
         // private readonly ILogger _logger = AppLogging.CreateLogger<ItemReader>();
 

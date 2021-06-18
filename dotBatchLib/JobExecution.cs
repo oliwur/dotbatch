@@ -1,7 +1,6 @@
-﻿using System;
-using Microsoft.Extensions.Logging;
+﻿using Microsoft.Extensions.Logging;
 
-namespace dotBatch
+namespace dotBatchLib
 {
     public class JobExecution
     {
@@ -13,7 +12,7 @@ namespace dotBatch
             _logger.LogTrace("run");
             foreach (Step step in Instance.Job.Steps)
             {
-                step.execute();
+                step.Execute();
             }
         }
     }

@@ -1,18 +1,17 @@
 ﻿using System;
-using Microsoft.Extensions.Logging;
 
-namespace dotBatch
+namespace dotBatchLib
 {
-    public interface ItemProcessor
+    public interface ITemProcessor
     {
-        public Object Process(Object o);
+        public object Process(object o);
     }
 
-    public class FuncItemProcessor<T,Tret> : ItemProcessor
+    public class FuncItemProcessor<T,TRet> : ITemProcessor
     {
-        private Func<T,Tret> _func;
+        private readonly Func<T,TRet> _func;
         
-        public FuncItemProcessor(Func<T,Tret> func)
+        public FuncItemProcessor(Func<T,TRet> func)
         {
             _func = func;
         }
