@@ -27,11 +27,14 @@ namespace dotBatchTest
             ITemReader reader = new CSVItemReader() {FilePath = _testData};
             
             reader.Open();
-            while (reader.HasNext())
+            int i = 0; // only 10 lines for this test
+            while (reader.HasNext() && i < 10)
             {
                 var item = reader.ReadItem();
                 
                 Console.WriteLine(item.ToString());
+                
+                i++;
             }
             
             Assert.False(reader.HasNext());
